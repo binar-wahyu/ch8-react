@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vanilla Sample</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app">
+    <h1 class="app-title">Sample in Vanilla JS</h1>
+    <span class="count-display">0</span>
+    <div class="buttons">
+      <button class="button-decrement">-1</button>
+      <button class="button-increment">+1</button>
+    </div>
+  </div>
+
+  <script>
+    let count = 0;
+
+    const countDisplay = document.querySelector(".count-display");
+    const buttonDecrement = document.querySelector(".button-decrement");
+    const buttonIncrement = document.querySelector(".button-increment");
+
+    buttonIncrement.addEventListener("click", () => {
+      count++;
+      countDisplay.textContent = count;
+    });
+
+    buttonDecrement.addEventListener("click", () => {
+      count--;
+      countDisplay.textContent = count;
+    });
+  </script>
+</body>
+
+</html>
